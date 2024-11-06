@@ -64,7 +64,7 @@ Click the "Add new fox" button to add a random fox image to the list. Images are
   height="auto"
   title="Random Fox"
 />
-
+```
 --- 
 
 ## 💻 Contributing
