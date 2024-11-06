@@ -2,24 +2,20 @@
 
 import { MouseEventHandler, } from "react";
 import { useState } from "react";
-import { RandomFox } from "./components/RandomFox";
+import { LazyImage } from "./components/RandomFox";
 
 const random = () => Math.floor(Math.random() * 124) + 1
-
-type ImageItem = { id: string, url: string }
-
 const generateId = () => Math.random().toString(36).substring(2, 9)
 
+//Type image
+type ImageItem = { id: string, url: string }
+
+
 export default function Home() {
-
   const [images, setImages] = useState<Array<ImageItem>>([])
-
-
 
   const addNewFox: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault()
-
-
 
     const newImageItem: ImageItem = { id: generateId(), url: `https://randomfox.ca/images/${random()}.jpg` }
     setImages([
@@ -39,7 +35,14 @@ export default function Home() {
 
         {images.map(({ id, url }) => (
           <div key={id} className="p-4">
-            <RandomFox image={url} />
+            <LazyImage
+              className="rounded bg-gray-300"
+              width={320}
+              height="auto"
+              title="Random Fox"
+              src={url}
+              onClick={() => console.log("hey")}
+            />
           </div>
         ))}
       </main >
