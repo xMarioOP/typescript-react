@@ -1,37 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦊 Random Fox Lazy Image Loader
 
-## Getting Started
+A Next.js app showcasing a **Lazy Image Component** to load images of random foxes from [randomfox.ca](https://randomfox.ca). The images only load when they're in view, optimizing load times and performance. Simply click a button to add new fox images that will appear as you scroll down.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
+- **Lazy Loading**: Images are loaded only when they are visible on the screen.
+- **Random Fox Generator**: Fetches a random fox image on each button click.
+- **Customizable Component**: Easily adjustable Lazy Image component with customizable dimensions and lazy-loading behavior.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies
+- **Next.js**: For the core application and file structure.
+- **React**: Component-based UI library.
+- **TailwindCSS**: Styling the app for a clean, responsive design.
+- **Lodash**: Utility library for random number generation.
+- **Plausible Analytics**: Tracks interactions such as button clicks.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/xMarioOP/typescript-react.git
+   cd random-fox-lazy-loader
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+   ```bash
+   npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**:
+   ```bash
+   npm run dev
+ 
+ ---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ ## 📄 Code Overview
 
-## Deploy on Vercel
+### Home Component
+The Home component manages the state and interactions for displaying fox images.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **State Management**: Maintains a list of fox images.
+- **Add New Fox Button**: Adds a new fox image by generating a random number and appending a new LazyImage component to the list.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# typescript-react
+### LazyImage Component
+A reusable component that implements lazy loading using the Intersection Observer API.
+
+- **Props**: Accepts the image URL and additional image attributes.
+- **Intersection Observer**: Detects when the image enters the viewport and loads it accordingly.
+
+## 🔧 Usage
+
+### Adding a New Fox Image
+Click the "Add new fox" button to add a random fox image to the list. Images are loaded only when they are scrolled into view, thanks to lazy loading.
+
+### 🖼️ Preview
+
+```html
+<LazyImage
+  src="https://randomfox.ca/images/{random_number}.jpg"
+  className="rounded-lg bg-gray-300"
+  width={320}
+  height="auto"
+  title="Random Fox"
+/>
+
+--- 
+
+## 💻 Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## 📝 License
+This project is open-source and available under the MIT License.
+
+## 🙏 Acknowledgments
+This project was built with knowledge from the amazing [React + TypeScript Course on Platzi](https://platzi.com/cursos/react-typescript/). Huge thanks to Platzi for their fantastic resources and support in learning React and TypeScript.
+
+Happy coding! 🦊
+
