@@ -59,13 +59,13 @@ export default function Home() {
           onClick={addNewFox}>Add new fox
         </button>
 
-        {images.map(({ id, url }) => (
+        {images.map(({ id, url }, index) => (
           <div key={id} className="p-4 grid place-items-center">
             <LazyImage
               className="rounded-lg  bg-gray-300"
               width={320}
               height="auto"
-              title="Random Fox"
+              title={`Random Fox #${index + 1}`}
               src={url}
               onClick={() => console.log("hey")}
             />
