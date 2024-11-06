@@ -24,14 +24,17 @@ A Next.js app showcasing a **Lazy Image Component** to load images of random fox
    ```bash
    git clone https://github.com/xMarioOP/typescript-react.git
    cd random-fox-lazy-loader
+   ```
 
 2. **Install dependencies**:
    ```bash
    npm install
+   ```
 
 3. **Run the development server**:
    ```bash
    npm run dev
+   ```
  
  ---
 
