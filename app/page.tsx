@@ -39,17 +39,30 @@ export default function Home() {
         ></script>
       </Head>
 
-      < main >
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+      <header className="pt-10 pb-4 px-4 sm:px-6 lg:px-8 grid place-items-center mb-5">
+        <p className="text-2xl leading-6 font-semibold tracking-wide  text-orange-500">
+          Lazy Image Component
+        </p>
+        <div className="max-w-lg mx-auto text-md  leading-7">
+          <p className="mt-4">
+            A generic React component to load images with lazy loading.
+          </p>
+          <p className="mt-4">
+            ✨✨ Added images will not be downloaded until they are visible on the screen.✨✨
+          </p>
+        </div>
+      </header>
 
-        <button onClick={addNewFox}>Add new fox</button>
+      < main >
+        <button
+          className="block mx-auto py-3 px-6 rounded-full bg-orange-500 font-bold cursor-pointer shadow-lg shadow-orange-500/50 hover:bg-orange-600"
+          onClick={addNewFox}>Add new fox
+        </button>
 
         {images.map(({ id, url }) => (
-          <div key={id} className="p-4">
+          <div key={id} className="p-4 grid place-items-center">
             <LazyImage
-              className="rounded bg-gray-300"
+              className="rounded-lg  bg-gray-300"
               width={320}
               height="auto"
               title="Random Fox"
