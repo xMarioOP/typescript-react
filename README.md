@@ -4,6 +4,11 @@ A Next.js app showcasing a **Lazy Image Component** to load images of random fox
 
 ---
 
+## 🚀 Live Demo
+You can view the live version of the project here: [Live Demo](https://xMarioOP.github.io/typescript-react/)
+
+---
+
 ## ✨ Features
 - **Lazy Loading**: Images are loaded only when they are visible on the screen.
 - **Random Fox Generator**: Fetches a random fox image on each button click.
